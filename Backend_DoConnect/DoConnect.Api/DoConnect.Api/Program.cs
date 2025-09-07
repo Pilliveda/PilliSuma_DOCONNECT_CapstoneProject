@@ -13,7 +13,7 @@ builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"))
 
 builder.Services.AddControllers();
 
-// Needed by Swagger
+// Needed by Swagger..
 builder.Services.AddEndpointsApiExplorer();
 
 // ---------- Swagger (with JWT “Authorize”) ----------
