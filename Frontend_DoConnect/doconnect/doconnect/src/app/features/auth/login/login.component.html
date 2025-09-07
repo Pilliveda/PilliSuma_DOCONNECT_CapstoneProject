@@ -1,0 +1,27 @@
+
+<div class="auth-box">
+ 
+  <div class="auth-panel-inner">
+    <h2 class="auth-title">Sign In</h2>
+
+    <form [formGroup]="f" (ngSubmit)="submit()">
+      <div class="mb-3">
+        <label for="usernameOrEmail" class="form-label">Email or Username</label>
+        <input id="usernameOrEmail" type="text" class="form-control form-underline"
+               formControlName="usernameOrEmail" placeholder="Enter your email" />
+      </div>
+
+      <div class="mb-2">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" type="password" class="form-control form-underline"
+               formControlName="password" placeholder="••••••••" />
+      </div>
+
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-gradient" [disabled]="f.invalid">Sign In</button>
+        <a routerLink="/auth/register" class="link-sm text-center">Create an account →</a>
+      </div>
+    </form>
+  </div>
+</div>
+

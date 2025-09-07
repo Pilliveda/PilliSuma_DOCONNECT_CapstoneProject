@@ -1,0 +1,78 @@
+// // .navbar {
+// //   display: flex;
+// //   justify-content: space-between;
+// // }
+// // .spacer {
+// //   flex: 1 1 auto;
+// // }
+// // .container {
+// //   padding: 16px;
+// // }
+// // .logo {
+// //   font-weight: bold;
+// //   letter-spacing: 1px;
+// // }
+// /* ---------- Brand palette & sizing ---------- */
+/* ===== Navbar Base ===== */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);  /* subtle shadow */
+  font-size: 0.95rem;
+  z-index: 1000;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Emoji logo spacing */
+.navbar-brand span[aria-hidden="true"] {
+  font-size: 1.3rem;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #fdfeff !important;    /* keep links white */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Hover + Active states */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+}
+//
+.DoConnectnavlogo {
+  height: 50px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+/* Logout button special highlight */
+.navbar-nav .nav-item:last-child .nav-link {
+  font-weight: 600;
+  color: #fbfefc !important; /* yellow highlight */
+}
+.navbar-nav .nav-item:last-child .nav-link:hover {
+  background: rgba(255, 209, 102, 0.15);
+  color: #f5f4f1 !important;
+}
+
+/* Mobile toggler adjustments */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Container spacing */
+.container {
+  margin-top: 2rem;
+}

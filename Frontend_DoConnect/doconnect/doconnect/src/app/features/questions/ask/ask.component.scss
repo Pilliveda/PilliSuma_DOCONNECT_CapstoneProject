@@ -1,0 +1,89 @@
+/* ===== Center wrapper ===== */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 64px); /* leaves room for navbar */
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #d3e3f4ae, #eef2ff);
+}
+
+/* ===== Card styling ===== */
+.ask-card {
+  border-radius: 16px;
+  background: #eef3d77a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ask-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Headings ===== */
+.ask-card h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #2563eb, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Form fields ===== */
+.full {
+  width: 100%;
+}
+
+:host ::ng-deep .mat-mdc-form-field {
+  width: 100%;
+}
+
+:host ::ng-deep .mat-mdc-form-field-flex {
+  border-radius: 10px;
+}
+
+:host ::ng-deep .mat-mdc-form-field-outline {
+  border-radius: 10px;
+}
+
+/* ===== File input ===== */
+input[type="file"].form-control {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="file"].form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* ===== Post button ===== */
+button[mat-flat-button] {
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button[mat-flat-button]:hover:not([disabled]) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 640px) {
+  .ask-card {
+    padding: 1.25rem !important;
+  }
+
+  .ask-card h2 {
+    font-size: 1.25rem;
+  }
+}

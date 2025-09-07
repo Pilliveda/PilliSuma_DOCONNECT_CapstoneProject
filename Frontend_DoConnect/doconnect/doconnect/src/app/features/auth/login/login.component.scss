@@ -1,0 +1,68 @@
+.auth-box {
+  width: 350px;
+  margin: 80px auto;
+  padding: 30px;
+  background: lightsteelblue; /* outer box light */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8391a6;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #020810;
+  border-radius: 8px;
+  background-color: #e2e8f0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 8px;
+  color: rgb(20, 2, 2);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+}
+
+.switch-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.switch-link a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}

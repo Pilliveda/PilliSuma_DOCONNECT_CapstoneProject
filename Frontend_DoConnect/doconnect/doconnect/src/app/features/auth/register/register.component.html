@@ -1,0 +1,55 @@
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <!-- <div class="auth-hero d-none d-md-flex">
+        <img src="/assets/unnamed.png" alt="Doconnect Logo" class="auth-hero-logo" /> -->
+  <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
+    <h2 class="text-center mb-4">Register</h2>
+<div class="card register-card shadow-sm p-4" style="max-width: 400px; width: 100%;">
+
+    <form [formGroup]="f" (ngSubmit)="submit()">
+
+      <!-- Username -->
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          id="username"
+          type="text"
+          class="form-control"
+          formControlName="username"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          id="email"
+          type="email"
+          class="form-control"
+          formControlName="email"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          id="password"
+          type="password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+
+      <!-- Buttons -->
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+          Register
+        </button>
+        <button type="button" class="btn btn-link" routerLink="/auth/login">
+          Already have account?
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

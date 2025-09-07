@@ -1,0 +1,94 @@
+/* ===== Page wrapper ===== */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* ===== Title ===== */
+.page .title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, #eb2539, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Tabs ===== */
+.nav-tabs {
+  border-bottom: 2px solid #e5e7eb;
+}
+.nav-tabs .nav-link {
+  font-weight: 600;
+  color: #6b7280;
+  border: none;
+  border-radius: 0;
+  transition: color .2s ease, border-color .2s ease;
+}
+.nav-tabs .nav-link:hover {
+  color: #2563eb;
+}
+.nav-tabs .nav-link.active {
+  color: #2563eb;
+  border-bottom: 3px solid #2563eb;
+  background: transparent;
+}
+
+/* ===== Cards ===== */
+.q-card {
+  border-radius: 14px;
+  border: none;
+  background: #94f8fdb6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.q-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+.q-card .card-title {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+.q-card .card-text {
+  color: #374151;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ===== Buttons ===== */
+.q-card .btn {
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 1rem;
+}
+.q-card .btn-outline-success {
+  color: #16a34a;
+  border-color: #16a34a;
+}
+.q-card .btn-outline-success:hover {
+  background: #16a34a;
+  color: #fff;
+}
+.q-card .btn-outline-danger {
+  color: #a72e2e;
+  border-color: #dc2626;
+}
+.q-card .btn-outline-danger:hover {
+  background: #dc2626;
+  color: #fff;
+}
+
+/* ===== Empty state ===== */
+.empty {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #de73525b;
+  text-align: center;
+  font-style: italic;
+  color: #6b7280;
+}

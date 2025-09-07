@@ -1,0 +1,55 @@
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+
+  <!-- Brand -->
+  <a class="navbar-brand d-flex align-items-center" routerLink="/">
+    <span class="me-2" aria-hidden="true"><img src="/assets/unnamed.png" class="DoConnectnavlogo"></span>
+    <span class="fw-bold">DOCONNECT</span>
+  </a>
+
+  <!-- Toggler (mobile) -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+
+      <!-- Logged-in navigation -->
+      <ng-container *ngIf="auth.isLoggedIn(); else guest">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/questions" routerLinkActive="active">Questions</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/questions/ask" routerLinkActive="active">Ask</a>
+        </li>
+
+        <li class="nav-item" *ngIf="auth.getUser()?.role === 'Admin'">
+          <a class="nav-link" routerLink="/admin" routerLinkActive="active">Admin</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout {{ auth.getUser()?.name }}</a>
+        </li>
+      </ng-container>
+
+      <!-- Guest navigation -->
+      <ng-template #guest>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/auth/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/auth/register">Register</a>
+        </li>
+      </ng-template>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- Main content -->
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>

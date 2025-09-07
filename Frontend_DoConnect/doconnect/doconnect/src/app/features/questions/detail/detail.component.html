@@ -1,0 +1,181 @@
+<!-- 
+<mat-card *ngIf="q">
+      <h2>{{ q.title }}</h2>
+      <p>{{ q.text }}</p>
+      
+
+      <div class="imgs" *ngIf="questionImages?.length">
+  <img *ngFor="let img of questionImages" [src]="asUrl(img)" alt="question image" />
+</div>
+      <small>By {{ q.author || 'Anon' }} • {{ q.createdAt | date }}</small>
+    </mat-card>
+
+    <mat-card *ngIf="answers?.length">
+      <h3>Answers</h3>
+      <div *ngFor="let a of answers" class="answer">
+        <p>{{ a.text }}</p>
+        <div class="imgs" *ngIf="a.images?.length">
+          <img *ngFor="let im of a.images" [src]="asUrl(im)" alt="answer image" />
+        </div>
+        <small>
+          By {{ a.author || 'Anon' }} • {{ a.createdAt ? (a.createdAt | date:'short') : '' }}
+          <span *ngIf="a.status && a.status !== 'Approved'"> • ({{ a.status }})</span>
+        </small>
+      </div>
+    </mat-card>
+
+    <mat-card>
+      <form [formGroup]="f" (ngSubmit)="post()">
+        <mat-form-field class="full">
+          <mat-label>Your answer</mat-label>
+          <textarea matInput rows="4" formControlName="body"></textarea>
+        </mat-form-field>
+    
+         <label class="btn btn-outline-primary">
+  <i class="bi bi-cloud-upload"></i> Choose Images
+  <input type="file" (change)="onFiles($event)" multiple hidden />
+</label>
+
+        <button mat-flat-button color="primary" [disabled]="f.invalid">Post answer</button>
+      </form>
+</mat-card> -->
+<!-- Question -->
+<!-- <div class="card shadow-sm mb-3" *ngIf="q">
+  <div class="card-body">
+    <h2 class="h5 mb-2">{{ q.title }}</h2>
+    <p class="mb-3">{{ q.text }}</p>
+
+    <div class="imgs mb-2" *ngIf="questionImages?.length">
+      <img *ngFor="let img of questionImages"
+           [src]="asUrl(img)"
+           alt="question image"
+           class="rounded border"
+           style="max-width:180px; max-height:130px; object-fit:cover; margin:0 .5rem .5rem 0;" />
+    </div>
+
+    <small class="text-muted">
+      By {{ q.author || 'Anon' }} • {{ q.createdAt | date }}
+    </small>
+  </div>
+</div>
+
+<!-- Answers -->
+<!-- <div class="card shadow-sm mb-3" *ngIf="answers?.length">
+  <div class="card-body">
+    <h3 class="h6 mb-3">Answers</h3>
+
+    <div *ngFor="let a of answers" class="answer mb-3 pb-3 border-bottom">
+      <p class="mb-2">{{ a.text }}</p>
+
+      <div class="imgs mb-2" *ngIf="a.images?.length">
+        <img *ngFor="let im of a.images"
+             [src]="asUrl(im)"
+             alt="answer image"
+             class="rounded border"
+             style="max-width:180px; max-height:130px; object-fit:cover; margin:0 .5rem .5rem 0;" />
+      </div>
+
+      <small class="text-muted">
+        By {{ a.author || 'Anon' }} • {{ a.createdAt ? (a.createdAt | date:'short') : '' }}
+        <span *ngIf="a.status && a.status !== 'Approved'"> • ({{ a.status }})</span>
+      </small>
+    </div>
+  </div>
+</div> -->
+
+<!-- Answer form -->
+<!-- <div class="card shadow-sm mb-3">
+  <div class="card-body">
+    <form [formGroup]="f" (ngSubmit)="post()">
+      <mat-form-field class="full w-100 mb-3">
+        <mat-label>Your answer</mat-label>
+        <textarea matInput rows="4" formControlName="body"></textarea>
+      </mat-form-field> -->
+
+      <!-- Cloud upload button -->
+      <!-- <label class="btn btn-outline-primary mb-3">
+        <i class="bi bi-cloud-upload"></i> Choose Images
+        <input type="file" (change)="onFiles($event)" multiple hidden />
+      </label>
+
+      <button mat-flat-button color="primary" [disabled]="f.invalid">Post answer</button>
+    </form>
+  </div>
+</div> --> -->
+
+
+
+<!-- Question -->
+<div class="card shadow-sm mb-3" *ngIf="q">
+  <div class="card-body">
+    <h2 class="h5 mb-2">{{ q.title }}</h2>
+    <p class="mb-3">{{ q.text }}</p>
+
+    <div class="imgs mb-2" *ngIf="questionImages?.length">
+      <img *ngFor="let img of questionImages"
+           [src]="asUrl(img)"
+           alt="question image"
+           class="rounded border"
+           style="max-width:200px; max-height:150px; object-fit:cover; margin:0 .5rem .5rem 0;" />
+    </div>
+
+    <small class="text-muted">
+      By {{ q.author || 'Anon' }} • {{ q.createdAt | date }}
+    </small>
+  </div>
+</div>
+
+<!-- Answers -->
+<div class="card shadow-sm mb-3" *ngIf="answers?.length">
+  <div class="card-body">
+    <h3 class="h6 mb-3">Answers</h3>
+
+    <div *ngFor="let a of answers" class="answer mb-3 pb-3 border-bottom">
+      <p class="mb-2">{{ a.text }}</p>
+
+      <div class="imgs mb-2" *ngIf="a.images?.length">
+        <img *ngFor="let im of a.images"
+             [src]="asUrl(im)"
+             alt="answer image"
+             class="rounded border"
+             style="max-width:200px; max-height:150px; object-fit:cover; margin:0 .5rem .5rem 0;" />
+      </div>
+
+      <small class="text-muted">
+        By {{ a.author || 'Anon' }} • {{ a.createdAt ? (a.createdAt | date:'short') : '' }}
+        <span *ngIf="a.status && a.status !== 'Approved'"> • ({{ a.status }})</span>
+      </small>
+    </div>
+  </div>
+</div>
+
+<!-- Answer form -->
+<div class="card shadow-sm mb-3">
+  <div class="card-body">
+    <form [formGroup]="f" (ngSubmit)="post()">
+
+      <!-- Textarea -->
+      <div class="mb-3">
+        <label for="answerBody" class="form-label fw-semibold">Your Answer</label>
+        <textarea id="answerBody"
+                  class="form-control"
+                  rows="4"
+                  formControlName="body"
+                  placeholder="Write your answer here..."></textarea>
+      </div>
+
+      <!-- Cloud upload button -->
+      <div class="mb-3">
+        <label class="btn btn-outline-primary">
+          <i class="bi bi-cloud-upload"></i> Choose Images
+          <input type="file" (change)="onFiles($event)" multiple hidden />
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+        Post Answer
+      </button>
+    </form>
+  </div>
+</div>
